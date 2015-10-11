@@ -10,10 +10,6 @@ class BuildingsController < ApplicationController
 		@buildings = Building.all
 	end
 
-	
-
-	
-
 	def create
 		 @building = Building.new(article_params)
  		 @building.save
