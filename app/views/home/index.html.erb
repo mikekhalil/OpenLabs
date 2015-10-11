@@ -1,2 +1,14 @@
-<h1> Hello, Rails! </h1> 
-<%= link_to 'Buildings', controller: 'buildings' %>
+<h1>Listing Buildings</h1>
+ <%= link_to 'home', controller: 'home' %> 
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+  
+  <% @buildings.each do |building| %>
+    <tr>
+      <td><%= building.name %></td>
+      <td> <%= link_to 'Show lab rooms', building_path(building.id) %></td>
+    </tr>
+  <% end %>
+</table>

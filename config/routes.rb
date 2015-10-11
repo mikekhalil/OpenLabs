@@ -2,6 +2,10 @@ Blog::Application.routes.draw do
   #get "home/index"
   
   resources :buildings
+  resources :labs
+  resources :computers
+  
+
   get '/', to: 'home#index', as: 'home'
   
 

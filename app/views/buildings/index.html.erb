@@ -4,10 +4,11 @@
   <tr>
     <th>Name</th>
   </tr>
+  
   <% @buildings.each do |building| %>
     <tr>
       <td><%= building.name %></td>
-      <td> <%= link_to 'Show lab rooms', building_path(1) %></td>
+      <td> <%= link_to 'Show lab rooms', building_path(building.id) %></td>
     </tr>
   <% end %>
 </table>

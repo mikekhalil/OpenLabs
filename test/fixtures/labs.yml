@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  numComputers: 1
+  roomNumber: MyString
+  isOccupied: false
+  building: MyString
+
+two:
+  numComputers: 1
+  roomNumber: MyString
+  isOccupied: false
+  building: MyString

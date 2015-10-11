@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  labRoom: MyString
+  used: false
+  cpuUsage: 1
+
+two:
+  name: MyString
+  labRoom: MyString
+  used: false
+  cpuUsage: 1

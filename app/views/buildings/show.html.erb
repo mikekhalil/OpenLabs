@@ -1,6 +1,27 @@
 <p>
   <strong>Name:</strong>
-  <%= @building.name %>
-  <%= @building.id %>
+  <%= @b.name %>
+  <%= @b.id %>
 </p>
-  <%= link_to 'buildings', controller: 'buildings' %> 
+
+
+<br> 
+<% @labs.each do |lab| %>
+    <tr>
+      <br>
+      <td><%= @b.name%></td>
+      <br>
+      <td><%= lab.numComputers %></td>
+      <td><%= lab.roomNumber %></td>s
+      <td><%= lab.isOccupied %></td>
+      <td><%= lab.id %></td>
+
+      <td> <%= link_to 'Show computers', lab_path(lab.id) %></td>
+      
+    </tr>
+    <br>
+  <% end %>
+  <%= link_to 'home', controller: 'home' %> 
+
+
+
