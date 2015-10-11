@@ -10,15 +10,4 @@ class BuildingsController < ApplicationController
 		@buildings = Building.all
 	end
 
-	def create
-		 @building = Building.new(article_params)
- 		 @building.save
-  		redirect_to @building
-	end
-
-
-	private	def article_params
-    	params.require(:building).permit(:name)
-  	end
-
 end
