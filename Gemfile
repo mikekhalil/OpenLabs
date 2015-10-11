@@ -5,7 +5,17 @@ gem 'rails', '3.2.16'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+#sqlite database
 gem 'sqlite3'
+
+
+#testing gems
+gem 'test-unit'
+gem 'minitest'
+
+
+#strong_parameters -- Not included in rails 3.2.16, so including the gem here
+gem 'strong_parameters'
 
 
 # Gems used only for assets and not required
