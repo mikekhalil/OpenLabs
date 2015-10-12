@@ -3,12 +3,31 @@
 <head>
   <title>Purdue Open Labs</title>
   <%= stylesheet_link_tag    :main %>
-  <%= javascript_include_tag "application" %>
+  <!--<%= javascript_include_tag "application" %>-->
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="landing">
+		<!-- Header -->
+			<div id="header" class="alt">
+				<h1 id="logo"><a href="/">Purdue Open Labs</a></h1>
+				<p>Cause who wants to work in a lab with a bunch of sluts</p>
+				<nav id="nav">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#" class="button alt">Jerk Off Now</a></li>
+					</ul>
+				</nav>
+			</div>
+			
 
 <%= yield %>
-
+	<%= javascript_include_tag "jquery" %>
+	<%= javascript_include_tag "skel.min" %>
+	<%= javascript_include_tag "jquery.dropotron.min" %>
+	<%= javascript_include_tag "jquery.onvisible.min" %>
+	<%= javascript_include_tag "jquery.poptrox.min" %>
+	<%= javascript_include_tag "util" %>
+	<%= javascript_include_tag "main" %>
 </body>
 </html>
