@@ -1215,7 +1215,7 @@
 	#banner {
 		@include padding(10em, 0, (1em, 0, 0, 0));
 		background-attachment: scroll, fixed;
-		background-image: url('images/overlay.png'), url('../../images/banner.jpg');
+		background-image: url(image_path('overlay.png')), url(image_path('banner.jpg'));
 		background-position: center center;
 		background-size: cover;
 		line-height: 2;
