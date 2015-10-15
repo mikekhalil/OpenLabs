@@ -5,5 +5,23 @@
   <%= @lab.building %>
 </p>
 
+
+<% @computers.each do |computer| %>
+    <tr>
+      <br>
+      <td><%= computer.cpuUsage%></td>
+      <br>
+      <td><%= computer.labRoom %></td>
+      <br>
+      <td><%= computer.name %></td>
+      <br>
+      <td><%= computer.used %></td>
+      <br>
+      <td> <%= computer.id%></td>
+    </tr>
+    <hr>
+    <br><br>
+    <br>
+  <% end %>
 <br> 
   <%= link_to 'home', controller: 'home' %> 

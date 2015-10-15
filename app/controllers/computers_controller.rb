@@ -1,7 +1,7 @@
 class ComputersController < ApplicationController
 	
 	def show
-		@computer = Computers.find(params[:id])
+		@computer = Computer.find(params[:id])
 		@labRoom = Labs.where(room: @computer.labRoom)
 	end
 
