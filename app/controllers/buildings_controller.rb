@@ -6,7 +6,7 @@ class BuildingsController < ApplicationController
 	end
 
 	def index
-		redirect_to home_path
+		@buildings = Building.all
 	end
 
 end

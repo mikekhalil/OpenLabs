@@ -2,31 +2,84 @@
 <html>
 <head>
   <title>Purdue Open Labs</title>
-  <%= stylesheet_link_tag    :main %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!--     Fonts and icons     -->
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    :ctpaper %>
+  <%= stylesheet_link_tag    :demo %>
+  <%= stylesheet_link_tag    :examples %>
+
+
   <!--<%= javascript_include_tag "application" %>-->
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="utf-8" />
   <%= csrf_meta_tags %>
+
 </head>
-<body class="landing">
-		<!-- Header -->
-			<div id="header" class="alt">
-				<h1 id="logo"><a href="/">Purdue Open Labs</a></h1>
-				<p>You won't code all night</p>
-				<nav id="nav">
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="#">About</a></li>
-					</ul>
-				</nav>
-			</div>
+<body>
+    <nav class="navbar navbar-default" role="navigation-demo">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Purdue Open Labs</a>
+        </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navigation-example-2">
+          <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope"></i> 
+                        Email
+                    </a>
+                </li>
+           </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-->
+    
 			
 
 <%= yield %>
+<footer class="footer-demo section-dark">
+        <div class="container">
+            <nav class="pull-left">
+                <ul>
+    
+                    <li>
+                        <a href="http://www.creative-tim.com">
+                           Template
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://imgur.com/a/2kPFV#IrFMpUu">
+                           Images
+                        </a>
+                    </li>
+              
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+	<!-- Latest compiled and minified JavaScript -->
 	<%= javascript_include_tag "jquery" %>
-	<%= javascript_include_tag "skel.min" %>
-	<%= javascript_include_tag "jquery.dropotron.min" %>
-	<%= javascript_include_tag "jquery.onvisible.min" %>
-	<%= javascript_include_tag "jquery.poptrox.min" %>
-	<%= javascript_include_tag "util" %>
-	<%= javascript_include_tag "main" %>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<%= javascript_include_tag "ct-paper-checkbox" %>
+	<%= javascript_include_tag "ct-paper-radio" %>
+	<%= javascript_include_tag "bootstrap-select" %>
+	<%= javascript_include_tag "bootstrap-datepicker" %>
+	<%= javascript_include_tag "ct-paper" %>
+
+
 </body>
 </html>
