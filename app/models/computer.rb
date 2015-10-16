@@ -50,13 +50,15 @@ file = File.join(Rails.root, 'app',  'output.txt')
 counter = 0
 
 File.open(file).each_slice(2) do |two_lines|
-	computerName = two_lines[0].chomp
-	used = two_lines[1].chomp
-
-	c = Computer.where(name: computerName).first
-	c.used = used.to_i
-	c.save
-
+		if two_lines != nil
+			computerName = two_lines[0].chomp
+			used = two_lines[1].chomp
+		end
+		c = Computer.where(name: computerName).first
+		if !c.nil?
+			c.used = used.to_i
+			c.save
+		end
 end
 
 
