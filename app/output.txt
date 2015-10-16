@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 moore00
 0
 moore01
@@ -148,3 +149,11 @@ pod5-4
 0
 pod5-5
 0
+=======
+sslab00
+1
+sslab01
+1
+sslab02
+1
+>>>>>>> 188173316d59f5dbef377d3451f671ad68f5b7c8
