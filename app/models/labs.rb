@@ -73,6 +73,7 @@ b158 = Labs.where(roomNumber: "B158").first
 b160 = Labs.where(roomNumber: "B160").first
 g40 = Labs.where(roomNumber: "G40").first
 h257 = Labs.where(roomNumber: "257").first
+b146 = Labs.where(roomNumber: "B146").first
 
 b148.numUsedComputers = 0
 b148.save
@@ -86,5 +87,7 @@ g40.numUsedComputers = 0
 g40.save
 h257.numUsedComputers = 0
 h257.save
+b146.numUsedComputers = 0
+b146.save
 
 
