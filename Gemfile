@@ -13,6 +13,9 @@ gem 'sqlite3'
 gem 'test-unit'
 gem 'minitest'
 
+#email
+gem 'mail_form'
+gem 'simple_form'
 
 #strong_parameters -- Not included in rails 3.2.16, so including the gem here
 gem 'strong_parameters'

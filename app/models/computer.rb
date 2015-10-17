@@ -1,5 +1,45 @@
 class Computer < ActiveRecord::Base
  	 validates :name, presence: true, :uniqueness => true
+
+		 	 def self.updateComputers
+			labs = Labs.all
+
+			labs.each do |lab|
+				lab.numUsedComputers = 0
+				lab.save
+			end
+
+
+			file = File.join(Rails.root, 'app',  'output.txt')
+			counter = 0
+			File.open(file).each_slice(2) do |two_lines|
+			if two_lines != nil
+				computerName = two_lines[0].chomp
+				used = two_lines[1].chomp
+			
+				c = Computer.where(name: computerName).first
+				if !c.nil?
+					c.used = used.to_i
+					c.save
+					l = Labs.where(roomNumber: c.labRoom).first
+					if !l.nil?
+						if c.used == true
+							l.numUsedComputers += 1
+							l.save
+						end
+					end
+				end
+			end
+			
+		end
+	end
+
+
+
+
+
+
+
 end
 
 
@@ -70,38 +110,12 @@ for i in 0...25
 	c.save
 end
 
-labs = Labs.all
-
-labs.each do |lab|
-	lab.numUsedComputers = 0
-	lab.save
-end
 
 
 
 
 
-file = File.join(Rails.root, 'app',  'output.txt')
-counter = 0
-File.open(file).each_slice(2) do |two_lines|
-	if two_lines != nil
-		computerName = two_lines[0].chomp
-		used = two_lines[1].chomp
-	
-		c = Computer.where(name: computerName).first
-		if !c.nil?
-			c.used = used.to_i
-			c.save
-			l = Labs.where(roomNumber: c.labRoom).first
-			if !l.nil?
-				if c.used == true
-					l.numUsedComputers += 1
-					l.save
-				end
-			end
-		end
-	end
-end
+
 
 
 

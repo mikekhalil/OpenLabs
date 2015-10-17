@@ -8,4 +8,6 @@ class ComputersController < ApplicationController
 	def index
 		redirect_to labs_path
 	end
+
 end
+
