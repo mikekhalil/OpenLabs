@@ -4,7 +4,7 @@
 .landing-header{
     background-size: cover;
     min-height: 570px;
-    background-image: url(image_path('overlay.png')), url(image_path('circuitBoard.jpg'));
+    background-image: url(image_path('overlay.png')), url(image_path('bbackground.jpg'));
 }
 .landing-header .motto{
     padding-top: 8%;
@@ -42,7 +42,7 @@
     z-index: 2;
 }
 #register-navbar a{
-    color: #FFF;
+    color: #FFFFFF;
 }
 .register-background{
     background-image: url('../paper_img/landscape.jpg');
