@@ -2,13 +2,10 @@ class Computer < ActiveRecord::Base
  	 validates :name, presence: true, :uniqueness => true
 end
 
-#TODO:
-#insert computers into database
-
 
 #B158 Computers
 labRoom = "B158"
-for i in 0...26
+for i in 0...25
 	computerName = "sslab"
 	computerName += "%02d" % i
 	c = Computer.new
@@ -46,9 +43,35 @@ for i in 1...6
 		c.save
 	end
 end 
+
+#haasg40 computers
+labRoom = "HaasG40"
+for i in 0...25
+	computerName = "borg"
+	computerName += "%02d" % i
+	c = Computer.new
+	c.name = computerName
+	c.labRoom = labRoom
+	c.used = 0
+	c.cpuUsage = 0
+	c.save
+end
+
+#haas257 computers
+labRoom = "Haas257"
+for i in 0...25
+	computerName = "xinu"
+	computerName += "%02d" % i
+	c = Computer.new
+	c.name = computerName
+	c.labRoom = labRoom
+	c.used = 0
+	c.cpuUsage = 0
+	c.save
+end
+
 file = File.join(Rails.root, 'app',  'output.txt')
 counter = 0
-
 File.open(file).each_slice(2) do |two_lines|
 		if two_lines != nil
 			computerName = two_lines[0].chomp
@@ -56,6 +79,8 @@ File.open(file).each_slice(2) do |two_lines|
 		end
 		c = Computer.where(name: computerName).first
 		if !c.nil?
+			lab = Labs.where(roomNumber: c.labRoom).first
+
 			c.used = used.to_i
 			c.save
 		end
