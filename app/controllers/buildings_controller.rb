@@ -6,7 +6,8 @@ class BuildingsController < ApplicationController
 	end
 
 	def index
-		@buildings = Building.all
+		@buildings = Building.all 
+		@machines = Machine.all
 	end
 
 end

@@ -4,6 +4,7 @@ Blog::Application.routes.draw do
   resources :buildings
   resources :labs
   resources :computers
+  resources :machines
   
 
   get '/', to: 'home#index', as: 'home'
