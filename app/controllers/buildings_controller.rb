@@ -8,6 +8,8 @@ class BuildingsController < ApplicationController
 	def index
 		@buildings = Building.all 
 		@machines = Machine.all
+		@lawsonComputers = Labs.where(building: "Lawson")
+		@haasComputers = Labs.where(building: "Haas")
 	end
 
 end

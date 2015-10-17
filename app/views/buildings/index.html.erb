@@ -1,27 +1,42 @@
-<h1>Listing Buildings</h1>
+
  <%= link_to 'home', controller: 'home' %> 
-<table>
+ 
+<h3>Lawson</h3> 
+<table class="table table-hover md-col-6">
   <tr>
-    <th>Name</th>
+    <th>Room Number</th>
+    <th>Total Computers</th> 
+    <th>Computers Used</th> 
+    <th> </th> 
   </tr>
 
-  <% @machines. each do |machine| %> 
-	<tr> 
-		<td><%= machine.name %> </td> 
-		<td><%= machine.cpuPercent %>% </td> 
-		<td><%= machine.numUsers %> </td> 
-		<td><%= machine.name %> </td> 
-		<td><%= machine.latencies %> </td>
-
-	</tr>
-  <% end %>
-  
-  <% @buildings.each do |building| %>
+  <% @lawsonComputers.each do |lab| %>
     <tr>
-      <td><%= building.name %></td>
-      <td> <%= link_to 'Show lab rooms', building_path(building.id) %></td>
+      <td><%= lab.roomNumber %></td>
+      <td><%= lab.numComputers %></td>
+      <td><%= lab.numUsedComputers %></td> 
+      <td> <%= link_to 'Show computers', lab_path(lab.id) %></td>
+      
     </tr>
   <% end %>
 </table>
+<h3>Haas</h3> 
+<table class="table table-hover md-col-6">
+  <tr>
+    <th>Room Number</th>
+    <th>Total Computer</th> 
+    <th>Computers Used</th> 
+    <th> </th> 
+  </tr>
 
+  <% @haasComputers.each do |lab| %>
+    <tr>
+      <td><%= lab.roomNumber %></td>
+      <td><%= lab.numComputers %></td>
+      <td><%= lab.numUsedComputers %></td> 
+      <td> <%= link_to 'Show computers', lab_path(lab.id) %></td>
+      
+    </tr>
+  <% end %>
+</table>
 
