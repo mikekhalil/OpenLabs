@@ -12,11 +12,11 @@
   </tr>
 
   <% @lawsonComputers.each do |lab| %>
-    <% if lab.numComputers - 10 <= lab.numUsedComputers %> 
-      <tr class="danger">
+    <% if lab.numComputers  == lab.numUsedComputers %> 
+      <tr class = "danger"
     <% else %>
-      <tr class="success">
-    <%end %>
+      <tr class = "success"
+    <% end %>
     <tr style="text-align: center;" > 
       <td><%= lab.roomNumber %></td>
       <td><%= lab.numComputers %></td>
@@ -38,11 +38,11 @@
   </tr>
 
   <% @haasComputers.each do |lab| %>
-   <% if lab.numComputers - 10 <= lab.numUsedComputers %> 
-    <tr class="danger">
-   <% else %>
-    <tr class="success">
-   <%end %>
+    <% if lab.numComputers  == lab.numUsedComputers %> 
+      <tr class = "danger"
+    <% else %>
+      <tr class = "success"
+    <% end %>
 
     <tr style="text-align: center;">
       <td><%= lab.roomNumber %></td>
