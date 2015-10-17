@@ -4,6 +4,17 @@
   <tr>
     <th>Name</th>
   </tr>
+
+  <% @machines. each do |machine| %> 
+	<tr> 
+		<td><%= machine.name %> </td> 
+		<td><%= machine.cpuPercent %>% </td> 
+		<td><%= machine.numUsers %> </td> 
+		<td><%= machine.name %> </td> 
+		<td><%= machine.latencies %> </td>
+
+	</tr>
+  <% end %>
   
   <% @buildings.each do |building| %>
     <tr>
