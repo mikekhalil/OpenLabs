@@ -78,13 +78,7 @@ labs.each do |lab|
 end
 
 
-lab160 = Lab.where(roomNumber: "B160").first
-lab160.destroy
-lab160.save
 
-lab131 = Lab.where(roomNumber: "B131").first
-lab131.destroy
-lab131.save
 
 
 file = File.join(Rails.root, 'app',  'output.txt')
