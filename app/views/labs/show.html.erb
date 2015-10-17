@@ -14,17 +14,18 @@
     <% if counter % 4 == 0 %>
       <div class="row">
     <% else %>
-      <div class="col-md-4">
+      <div class="col-md-4" style="text-align: center;">
       <% if computer.used? %>
         <i style="color: red;" class="fa fa-desktop fa-5x"></i>
       <% else %>
          <i style="color: green;" class="fa fa-desktop fa-5x"></i>
       <% end %>
         <br>
-        <%= computer.name %>
+
+       <%= "      " + computer.name%> 
         </div>
     <% end %>
-    <% if counter % 3 == 0 && counter != 0%>
+    <% if counter % 4 == 0 && counter != 0%>
       </div>
     <% end %>
     
