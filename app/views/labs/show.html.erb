@@ -9,10 +9,10 @@
 
 
 <% @computers.each do |computer| %>
-      <% if computer.used? %>
+    <% if computer.used? %>
         <%= image_tag "paul.jpg", :class => "img-circle img-responsive"%>
-      <% end %>
-      <tr>
+    <% end %>
+    <tr>
       <br>
       <td><%= computer.cpuUsage%></td>
       <br>
