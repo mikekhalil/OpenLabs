@@ -37,7 +37,7 @@ moore17
 moore18
 0
 moore19
-1
+0
 moore20
 0
 moore21
