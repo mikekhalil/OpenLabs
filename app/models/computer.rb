@@ -70,22 +70,30 @@ for i in 0...25
 	c.save
 end
 
+labs = Labs.all
+labs.each do |lab|
+	lab.numUsedComputers = 0
+end
+
+
+
 file = File.join(Rails.root, 'app',  'output.txt')
 counter = 0
 File.open(file).each_slice(2) do |two_lines|
-		if two_lines != nil
-			computerName = two_lines[0].chomp
-			used = two_lines[1].chomp
-		end
+	if two_lines != nil
+		computerName = two_lines[0].chomp
+		used = two_lines[1].chomp
+	
 		c = Computer.where(name: computerName).first
 		if !c.nil?
 			l = Labs.where(roomNumber: c.labRoom).first
-			unless l.nil?
+			if !l.nil?
 				l.numUsedComputers += 1
 			end
 			c.used = used.to_i
 			c.save
 		end
+	end
 end
 
 
