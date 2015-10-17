@@ -8,14 +8,6 @@ class Labs < ActiveRecord::Base
 end
 
 
-lab160 = Labs.where(roomNumber: "B160").first
-lab160.destroy
-lab160.save
-
-lab131 = Labs.where(roomNumber: "B131").first
-lab131.destroy
-lab131.save
-
 lawsonb148 = Labs.new
 lawsonb148.numComputers = 25
 lawsonb148.roomNumber = 'B148'
