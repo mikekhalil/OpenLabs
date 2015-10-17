@@ -1,3 +1,4 @@
+<div class="container">
 <p>
   <strong>Name:</strong>
   <p>Room Number : <%= @lab.roomNumber %></p>
@@ -7,28 +8,28 @@
 </p>
 
 
+<% counter = 0 %>
 
 <% @computers.each do |computer| %>
-    <% if computer.used? %>
-        <i style="color: red;" class="fa fa-desktop fa-5x"></i>
+    <% if counter % 4 == 0 %>
+      <div class="row">
     <% else %>
+      <div class="col-md-4">
+      <% if computer.used? %>
+        <i style="color: red;" class="fa fa-desktop fa-5x"></i>
+      <% else %>
          <i style="color: green;" class="fa fa-desktop fa-5x"></i>
+      <% end %>
+        <br>
+        <%= computer.name %>
+        </div>
     <% end %>
-    <tr>
-      <br>
-      <td><%= computer.cpuUsage%></td>
-      <br>
-      <td><%= computer.labRoom %></td>
-      <br>
-      <td><%= computer.name %></td>
-      <br>
-      <td><%= computer.used %></td>
-      <br>
-      <td> <%= computer.id%></td>
-    </tr>
-    <hr>
-    <br><br>
-    <br>
+    <% if counter % 3 == 0 && counter != 0%>
+      </div>
+    <% end %>
+    
+  <% counter += 1 %>
   <% end %>
-<br> 
-  <%= link_to 'home', controller: 'home' %> 
+
+  <%= link_to 'Back', buildings_path%>
+</div>
