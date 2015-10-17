@@ -13,18 +13,18 @@
 <% @computers.each do |computer| %>
     <% if counter % 4 == 0 %>
       <div class="row">
-    <% else %>
+    <% end %>
       <div class="col-md-4" style="text-align: center;">
       <% if computer.used? %>
-        <i style="color: red;" class="fa fa-desktop fa-5x"></i>
+        <i style="color: red;" class="fa fa-desktop fa-5x"></i><br>
+      
       <% else %>
-         <i style="color: green;" class="fa fa-desktop fa-5x"></i>
+         <i style="color: green;" class="fa fa-desktop fa-5x"></i><br>
       <% end %>
-        <br>
+        <p><%= computer.name %></p>
 
-       <%= "      " + computer.name%> 
         </div>
-    <% end %>
+    
     <% if counter % 4 == 0 && counter != 0%>
       </div>
     <% end %>
