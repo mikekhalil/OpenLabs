@@ -33,7 +33,7 @@ bigEntrance
 		opacity: 0.2;
 	}
 	30% {
-		transform: scale(1.03) rotate(-10deg) translateX(2%) translateY(-2%);		
+		transform: scale(1.03) rotate(-1deg) translateX(2%) translateY(-2%);		
 		opacity: 1;
 	}
 	45% {
