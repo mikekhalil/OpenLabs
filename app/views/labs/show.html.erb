@@ -10,7 +10,9 @@
 
 <% @computers.each do |computer| %>
     <% if computer.used? %>
-        <%= image_tag "paul.jpg", :class => "img-circle img-responsive"%>
+        <i style="color: red;" class="fa fa-desktop fa-5x"></i>
+    <% else %>
+         <i style="color: green;" class="fa fa-desktop fa-5x"></i>
     <% end %>
     <tr>
       <br>
