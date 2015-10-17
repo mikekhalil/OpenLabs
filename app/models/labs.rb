@@ -8,7 +8,6 @@ class Labs < ActiveRecord::Base
 end
 
 
-
 lawsonb148 = Labs.new
 lawsonb148.numComputers = 25
 lawsonb148.roomNumber = 'B148'
@@ -27,13 +26,6 @@ lawsonb146.save
 
 
 
-lawsonb131 = Labs.new
-lawsonb131.numComputers = 25
-lawsonb131.roomNumber = 'B131'
-lawsonb131.isOccupied = 1
-lawsonb131.building = "Lawson"
-lawsonb131.numUsedComputers = 0
-lawsonb131.save
 
 lawsonb158 = Labs.new
 lawsonb158.numComputers = 25
@@ -43,13 +35,7 @@ lawsonb158.building = "Lawson"
 lawsonb158.numUsedComputers = 0
 lawsonb158.save
 
-lawsonb160 = Labs.new
-lawsonb160.numComputers = 25
-lawsonb160.roomNumber = 'B160'
-lawsonb160.isOccupied = 1
-lawsonb160.building = "Lawson"
-lawsonb160.numUsedComputers = 0
-lawsonb160.save
+
 
 haasg40 = Labs.new
 haasg40.numComputers = 25
