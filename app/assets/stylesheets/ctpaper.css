@@ -87,14 +87,14 @@ body {
   font-family: 'Montserrat', "Helvetica", Arial, sans-serif; }
 
 a {
-  color: #FFFFFF;
+  color: #B1946C;
   -webkit-transition: all 150ms linear;
   -moz-transition: all 150ms linear;
   -o-transition: all 150ms linear;
   -ms-transition: all 150ms linear;
   transition: all 150ms linear; }
   a:hover, a:focus {
-    color: #FFFFFF;
+    color: #B1946C;
     text-decoration: none; }
 
 hr {
@@ -233,9 +233,9 @@ input.ct-red + span + label + span.switch-right {
   -ms-transition: all 150ms linear;
   transition: all 150ms linear; }
   .navbar .navbar-nav > li > a.btn:hover, .navbar .navbar-nav > li > a.btn:focus, .navbar .navbar-nav > li > a.btn:active, .navbar .navbar-nav > li > a.btn.active, .open > .navbar .navbar-nav > li > a.btn.dropdown-toggle, .btn:hover, .btn:focus, .btn:active, .btn.active, .open > .btn.dropdown-toggle {
-    background-color: #B1946C;
+    background-color: #FFFFFF;
     color: rgba(255, 255, 255, 0.7);
-    border-color: #B1946C; }
+    border-color: #FFFFFF; }
     .navbar .navbar-nav > li > a.btn:hover .caret, .navbar .navbar-nav > li > a.btn:focus .caret, .navbar .navbar-nav > li > a.btn:active .caret, .navbar .navbar-nav > li > a.btn.active .caret, .open > .navbar .navbar-nav > li > a.btn.dropdown-toggle .caret, .btn:hover .caret, .btn:focus .caret, .btn:active .caret, .btn.active .caret, .open > .btn.dropdown-toggle .caret {
       border-top-color: rgba(255, 255, 255, 0.7); }
   .navbar .navbar-nav > li > a.btn.disabled, .navbar .navbar-nav > li > a.btn.disabled:hover, .navbar .navbar-nav > li > a.btn.disabled:focus, .navbar .navbar-nav > li > a.btn.disabled.focus, .navbar .navbar-nav > li > a.btn.disabled:active, .navbar .navbar-nav > li > a.btn.disabled.active, .navbar .navbar-nav > li > a.btn:disabled, .navbar .navbar-nav > li > a.btn:disabled:hover, .navbar .navbar-nav > li > a.btn:disabled:focus, .navbar .navbar-nav > li > a.btn:disabled.focus, .navbar .navbar-nav > li > a.btn:disabled:active, .navbar .navbar-nav > li > a.btn:disabled.active, .navbar .navbar-nav > li > a.btn[disabled], .navbar .navbar-nav > li > a.btn[disabled]:hover, .navbar .navbar-nav > li > a.btn[disabled]:focus, .navbar .navbar-nav > li > a.btn[disabled].focus, .navbar .navbar-nav > li > a.btn[disabled]:active, .navbar .navbar-nav > li > a.btn[disabled].active, fieldset[disabled] .navbar .navbar-nav > li > a.btn, fieldset[disabled] .navbar .navbar-nav > li > a.btn:hover, fieldset[disabled] .navbar .navbar-nav > li > a.btn:focus, fieldset[disabled] .navbar .navbar-nav > li > a.btn.focus, fieldset[disabled] .navbar .navbar-nav > li > a.btn:active, fieldset[disabled] .navbar .navbar-nav > li > a.btn.active, .btn.disabled, .btn.disabled:hover, .btn.disabled:focus, .btn.disabled.focus, .btn.disabled:active, .btn.disabled.active, .btn:disabled, .btn:disabled:hover, .btn:disabled:focus, .btn:disabled.focus, .btn:disabled:active, .btn:disabled.active, .btn[disabled], .btn[disabled]:hover, .btn[disabled]:focus, .btn[disabled].focus, .btn[disabled]:active, .btn[disabled].active, fieldset[disabled] .btn, fieldset[disabled] .btn:hover, fieldset[disabled] .btn:focus, fieldset[disabled] .btn.focus, fieldset[disabled] .btn:active, fieldset[disabled] .btn.active {
