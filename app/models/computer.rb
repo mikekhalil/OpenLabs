@@ -45,7 +45,7 @@ for i in 1...6
 end 
 
 #haasg40 computers
-labRoom = "HaasG40"
+labRoom = "G40"
 for i in 0...25
 	computerName = "borg"
 	computerName += "%02d" % i
@@ -58,7 +58,7 @@ for i in 0...25
 end
 
 #haas257 computers
-labRoom = "Haas257"
+labRoom = "257"
 for i in 0...25
 	computerName = "xinu"
 	computerName += "%02d" % i
@@ -79,8 +79,10 @@ File.open(file).each_slice(2) do |two_lines|
 		end
 		c = Computer.where(name: computerName).first
 		if !c.nil?
-			lab = Labs.where(roomNumber: c.labRoom).first
-
+			l = Labs.where(roomNumber: c.labRoom).first
+			unless l.nil?
+				l.numUsedComputers += 1
+			end
 			c.used = used.to_i
 			c.save
 		end
