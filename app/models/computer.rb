@@ -79,6 +79,8 @@ end
 
 
 
+
+
 file = File.join(Rails.root, 'app',  'output.txt')
 counter = 0
 File.open(file).each_slice(2) do |two_lines|

@@ -4,15 +4,20 @@
 <h3>Lawson</h3> 
 <table class="table table-hover md-col-6">
   <tr>
-    <th>Room Number</th>
-    <th>Total Computers</th> 
-    <th>Computers Used</th> 
-    <th>Computers Free</th> 
+    <th style="text-align: center;">Room Number</th>
+    <th style="text-align: center;">Total Computers</th> 
+    <th style="text-align: center;"> Computers Used</th> 
+    <th style="text-align: center;">Computers Free</th> 
     <th> </th> 
   </tr>
 
   <% @lawsonComputers.each do |lab| %>
-    <tr>
+    <% if lab.numComputers - 10 <= lab.numUsedComputers %> 
+      <tr class="failure">
+    <% else %>
+      <tr class="success">
+    <%end %>
+    <tr style="text-align: center;" > 
       <td><%= lab.roomNumber %></td>
       <td><%= lab.numComputers %></td>
       <td><%= lab.numUsedComputers %></td> 
@@ -25,22 +30,28 @@
 <h3>Haas</h3> 
 <table class="table table-hover md-col-6">
   <tr>
-    <th>Room Number</th>
-    <th>Total Computer</th> 
-    <th>Computers Used</th> 
-    <th>Computers Free</th> 
+    <th style="text-align: center;">Room Number</th>
+    <th style="text-align: center;">Total Computers</th> 
+    <th style="text-align: center;"> Computers Used</th> 
+    <th style="text-align: center;">Computers Free</th> 
     <th> </th> 
   </tr>
 
   <% @haasComputers.each do |lab| %>
-    <tr>
+   <% if lab.numComputers - 10 <= lab.numUsedComputers %> 
+    <tr class="failure">
+   <% else %>
+    <tr class="success">
+   <%end %>
+
+=======
+    <tr style="text-align: center;">
       <td><%= lab.roomNumber %></td>
       <td><%= lab.numComputers %></td>
       <td><%= lab.numUsedComputers %></td> 
       <td><%= lab.numComputers - lab.numUsedComputers %></td> 
       <td> <%= link_to 'Show computers', lab_path(lab.id) %></td>
-      
-    </tr>
+      </div>     
   <% end %>
 </table>
 

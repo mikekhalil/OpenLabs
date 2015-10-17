@@ -1,12 +1,13 @@
-<div class="container">
-<p>
-  <%= link_to 'Back', buildings_path%>
-  <strong>Name:</strong>
-  <p>Room Number : <%= @lab.roomNumber %></p>
-  <p> Lab ID : <%= @lab.id %> </p>
-  <p> Lab Building: <%= @lab.building %> </p>
-  <p> Num Computers Used: <%= @lab.numUsedComputers %> </p>
-</p>
+
+<div class="container" >
+<h5><%= link_to 'Back', buildings_path%></h5> 
+  <div style="text-align: center;"> 
+    <div style="margin-left: 60px;"> 
+      <h5>Building: <%= @lab.building %> </h5>
+      <h5>Lab : <%= @lab.roomNumber %></h5>
+      <h5> Free Computers <%= @lab.numComputers - @lab.numUsedComputers %> </h5>
+    </div> 
+
 
 <% @computers.each do |computer| %>
    
@@ -21,5 +22,5 @@
   <!-- GUSTAVO DID THIS -->
   <% end %>
 
-  
+  </div> 
 </div>
