@@ -71,8 +71,10 @@ for i in 0...25
 end
 
 labs = Labs.all
+
 labs.each do |lab|
 	lab.numUsedComputers = 0
+	lab.save
 end
 
 
@@ -86,12 +88,15 @@ File.open(file).each_slice(2) do |two_lines|
 	
 		c = Computer.where(name: computerName).first
 		if !c.nil?
-			l = Labs.where(roomNumber: c.labRoom).first
-			if !l.nil?
-				l.numUsedComputers += 1
-			end
 			c.used = used.to_i
 			c.save
+			l = Labs.where(roomNumber: c.labRoom).first
+			if !l.nil?
+				if c.used == true
+					l.numUsedComputers += 1
+					l.save
+				end
+			end
 		end
 	end
 end
