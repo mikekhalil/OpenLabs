@@ -1,10 +1,12 @@
-<div class="container" style="text-align: center;">
 
-  <%= link_to 'Back', buildings_path%>
-  <h5>Building: <%= @lab.building %> </h5>
-  <h5>Lab : <%= @lab.roomNumber %></h5>
-  <h5> Free Computers <%= @lab.numComputers - @lab.numUsedComputers %> </h5>
-
+<div class="container" >
+<h5><%= link_to 'Back', buildings_path%></h5> 
+  <div style="text-align: center;"> 
+    <div style="margin-left: 60px;"> 
+      <h5>Building: <%= @lab.building %> </h5>
+      <h5>Lab : <%= @lab.roomNumber %></h5>
+      <h5> Free Computers <%= @lab.numComputers - @lab.numUsedComputers %> </h5>
+    </div> 
 
 
 <% @computers.each do |computer| %>
@@ -20,5 +22,5 @@
   <!-- GUSTAVO DID THIS -->
   <% end %>
 
-  
+  </div> 
 </div>
