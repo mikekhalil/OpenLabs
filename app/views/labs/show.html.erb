@@ -3,8 +3,7 @@
 <h5><%= link_to 'Back', buildings_path%></h5> 
   <div style="text-align: center;"> 
     <div style="margin-left: 60px;"> 
-      <h5>Building: <%= @lab.building %> </h5>
-      <h5>Lab : <%= @lab.roomNumber %></h5>
+      <h5><%= @lab.building %> <%= @lab.roomNumber %></h5>
       <h5> Free Computers <%= @lab.numComputers - @lab.numUsedComputers %> </h5>
     </div> 
 
@@ -22,5 +21,29 @@
   <!-- GUSTAVO DID THIS -->
   <% end %>
 
+
   </div> 
+
 </div>
+
+<div class="container" style="text-align: center;"> 
+      <h5>Labs full or want to work remotely? You can ssh into: </h5> 
+      <table class="table table-bordered"> 
+      <tr> 
+        <th style="text-align: center;">Host</th> 
+        <th style="text-align: center;">Current CPU usage</th> 
+        <th style="text-align: center;">Number of Users</th> 
+        <th style="text-align: center;">Latency (Ave: 50 ms)</th>  
+      </tr>
+      <% @machines.each do |machine| %> 
+      <tr> 
+        <td><%= machine.name %>.cs.purdue.edu</td> 
+        <td><%= machine.cpuPercent %>%</td> 
+        <td><%= machine.numUsers %></td> 
+        <td><%= machine.latencies %> ms</td>
+
+      </tr> 
+        
+      <% end %> 
+    </table> 
+</div> 

@@ -10,6 +10,7 @@ class BuildingsController < ApplicationController
 		@machines = Machine.all
 		@lawsonComputers = Labs.where(building: "Lawson")
 		@haasComputers = Labs.where(building: "Haas")
+		@computers = Computer.all
 	end
 
 end
