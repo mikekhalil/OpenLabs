@@ -12,7 +12,11 @@
   </tr>
 
   <% @lawsonComputers.each do |lab| %>
-    <tr>
+    <% if lab.numComputers - 10 <= lab.numUsedComputers %> 
+      <tr class="failure">
+    <% else %>
+      <tr class="success">
+    <%end %>
       <td><%= lab.roomNumber %></td>
       <td><%= lab.numComputers %></td>
       <td><%= lab.numUsedComputers %></td> 
@@ -33,14 +37,18 @@
   </tr>
 
   <% @haasComputers.each do |lab| %>
-    <tr>
+   <% if lab.numComputers - 10 <= lab.numUsedComputers %> 
+    <tr class="failure">
+   <% else %>
+    <tr class="success">
+   <%end %>
+
       <td><%= lab.roomNumber %></td>
       <td><%= lab.numComputers %></td>
       <td><%= lab.numUsedComputers %></td> 
       <td><%= lab.numComputers - lab.numUsedComputers %></td> 
       <td> <%= link_to 'Show computers', lab_path(lab.id) %></td>
-      
-    </tr>
+      </div>     
   <% end %>
 </table>
 
