@@ -1,12 +1,13 @@
 
  <%= link_to 'home', controller: 'home' %> 
  
-<h3>Lawson</h3> 
+<h3>Labs in Lawson</h3> 
 <table class="table table-hover md-col-6">
   <tr>
     <th>Room Number</th>
     <th>Total Computers</th> 
     <th>Computers Used</th> 
+    <th>Computers Free</th> 
     <th> </th> 
   </tr>
 
@@ -15,17 +16,19 @@
       <td><%= lab.roomNumber %></td>
       <td><%= lab.numComputers %></td>
       <td><%= lab.numUsedComputers %></td> 
+      <td><%= lab.numComputers - lab.numUsedComputers %></td> 
       <td> <%= link_to 'Show computers', lab_path(lab.id) %></td>
       
     </tr>
   <% end %>
 </table>
-<h3>Haas</h3> 
+<h3>Labs in Haas</h3> 
 <table class="table table-hover md-col-6">
   <tr>
     <th>Room Number</th>
     <th>Total Computer</th> 
     <th>Computers Used</th> 
+    <th>Computers Free</th> 
     <th> </th> 
   </tr>
 
@@ -34,6 +37,7 @@
       <td><%= lab.roomNumber %></td>
       <td><%= lab.numComputers %></td>
       <td><%= lab.numUsedComputers %></td> 
+      <td><%= lab.numComputers - lab.numUsedComputers %></td> 
       <td> <%= link_to 'Show computers', lab_path(lab.id) %></td>
       
     </tr>
