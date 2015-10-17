@@ -18,8 +18,8 @@ bigEntrance
 	animation-name: bigEntrance;
 	-webkit-animation-name: bigEntrance;	
 
-	animation-duration: 50s;	
-	-webkit-animation-duration: 50s;
+	animation-duration: 150s;	
+	-webkit-animation-duration: 150s;
 
 	animation-timing-function: ease-out;	
 	-webkit-animation-timing-function: ease-out;	
@@ -29,30 +29,30 @@ bigEntrance
 
 @keyframes bigEntrance {
 	0% {
-		transform: scale(0.3) rotate(1500deg) translateX(-30%) translateY(30%);
-		opacity: 1.2;
+		transform: scale(0.3) rotate(20deg) translateX(-30%) translateY(30%);
+		opacity: 0.2;
 	}
-	30% {
-		transform: scale(1.03) rotate(-1deg) translateX(2%) translateY(-2%);		
+	5% {
+		transform: scale(1.03) rotate(-10deg) translateX(2%) translateY(-2%);		
 		opacity: 1;
 	}
-	45% {
+	9% {
 		transform: scale(0.98) rotate(5deg) translateX(0%) translateY(0%);
 		opacity: 1;
 	}
-	55% {
+	18% {
 		transform: scale(1.01) rotate(-5deg) translateX(0%) translateY(0%);		
 		opacity: 1;
 	}	
-	65% {
+	35% {
 		transform: scale(0.99) rotate(5deg) translateX(0%) translateY(0%);
 		opacity: 1;
 	}
-	75% {
+	55% {
 		transform: scale(1.01) rotate(-3deg) translateX(0%) translateY(0%);		
 		opacity: 1;
 	}	
-	85% {
+	75% {
 		transform: scale(0.99) rotate(2deg) translateX(0%) translateY(0%);
 		opacity: 1;
 	}
