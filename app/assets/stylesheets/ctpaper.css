@@ -49,6 +49,8 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
   font-size: 60%; }
 
 .title-uppercase {
+  position: relative;
+  z-index: 1;
   text-transform: uppercase; }
 
 blockquote {
@@ -223,6 +225,8 @@ input.ct-red + span + label + span.switch-right {
   padding: 0px 18px;
   border-color: #66615B;
   color: #66615B;
+  position: relative;
+  z-index: 1;
   -webkit-transition: all 150ms linear;
   -moz-transition: all 150ms linear;
   -o-transition: all 150ms linear;
