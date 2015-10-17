@@ -5,7 +5,8 @@ class LabsController < ApplicationController
 	end
 
 	def index
-		redirect_to buildings_path
+		@lawsonComputers = Labs.where(building: "Lawson")
+		@haasComputers = Labs.where(building: "Haas")
 	end
 
 end
