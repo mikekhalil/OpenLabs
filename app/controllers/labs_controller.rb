@@ -2,7 +2,8 @@ class LabsController < ApplicationController
 	def show
 		@lab = Labs.find(params[:id])
 		@computers = Computer.where(labRoom: @lab.roomNumber)
-		@computers = Computer.all
+		@machines = Machine.all
+		@derp = Computer.all
 	end
 
 	def index
