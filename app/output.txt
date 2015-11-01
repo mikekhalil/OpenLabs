@@ -1,9 +1,6 @@
 moore00
-1
 moore01
-1
 moore02
-1
 moore03
 1
 moore04

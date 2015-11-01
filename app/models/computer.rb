@@ -1,7 +1,7 @@
 class Computer < ActiveRecord::Base
  	 validates :name, presence: true, :uniqueness => true
 
-		 	 def self.updateComputers
+		 	def self.updateComputers
 			labs = Labs.all
 
 			labs.each do |lab|
@@ -9,28 +9,30 @@ class Computer < ActiveRecord::Base
 				lab.save
 			end
 
-
 			file = File.join(Rails.root, 'app',  'output.txt')
-			counter = 0
-			File.open(file).each_slice(2) do |two_lines|
-			if two_lines != nil
-				computerName = two_lines[0].chomp
-				used = two_lines[1].chomp
-			
-				c = Computer.where(name: computerName).first
-				if !c.nil?
-					c.used = used.to_i
-					c.save
-					l = Labs.where(roomNumber: c.labRoom).first
-					if !l.nil?
-						if c.used == true
-							l.numUsedComputers += 1
-							l.save
+			#set up computer name and used variables outside of loop to have the correct scope
+			computerName = "" 
+			used = "0"
+			File.open(file).each_slice(1) do |line|
+			if !(line[0].blank?)
+				if line[0].length > 2
+					computerName = line[0].chomp
+				else
+					used = line[0].chomp
+					c = Computer.where(name: computerName).first
+					if !c.nil?
+						c.used = used.to_i
+						c.save
+						l = Labs.where(roomNumber: c.labRoom).first
+						if !l.nil?
+							if c.used == true
+								l.numUsedComputers += 1
+								l.save
+							end
 						end
 					end
 				end
 			end
-			
 		end
 	end
 
