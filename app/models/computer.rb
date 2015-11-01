@@ -38,15 +38,7 @@ class Computer < ActiveRecord::Base
 			end
 		end
 	end
-
-
-
-
-
-
-
 end
-
 
 #B158 Computers
 labRoom = "B158"
