@@ -21,11 +21,14 @@ class Computer < ActiveRecord::Base
 					used = line[0].chomp
 					c = Computer.where(name: computerName).first
 					if !c.nil?
-						c.used = used.to_i
-						c.save
+						usedInt = used.to_i
+						if usedInt != c.used	
+							c.used = usedInt
+							c.save
+						end
 						l = Labs.where(roomNumber: c.labRoom).first
 						if !l.nil?
-							if c.used == true
+							if c.used
 								l.numUsedComputers += 1
 								l.save
 							end
